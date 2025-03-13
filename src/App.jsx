@@ -1,12 +1,20 @@
-import { useState } from "react";//de ce folosim asta
-import "./App.css";
-import Home from "./Home";
+import Examene from "./pages/Examene/Examene";
+import Home from "./pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Home />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/examene" element={<Examene />} />
+        {/* <Route path="/examen/:an/:id" element={<Examene />} /> */}
+      </Routes>
+    </BrowserRouter>
+    // <BrowserRouter
+    // <div>
+    //   <Home />
+    // </div>
   );
 }
 

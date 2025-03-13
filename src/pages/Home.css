@@ -1,0 +1,236 @@
+body {
+  all: unset;
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa; /* Fundal turcoaz pe tot ecranul */
+  min-height: 100vh;
+}
+
+#navbar {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 1rem;
+  background-color: #e0f7fa;
+}
+
+#hero {
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0f7fa;
+}
+
+#options {
+  height: 15vh;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0 10%;
+  background-color: #e0f7fa;
+}
+
+.buton-optiuni {
+  width: 100%;
+  height: 50%;
+  border-radius: 1rem;
+  background-color: #00bcd4;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buton-optiuni:hover {
+  background-color: #0097a7;
+  transform: translateY(-3px);
+}
+
+#contact {
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 2rem;
+  background-color: #e0f7fa;
+}
+
+.container {
+}
+
+.nume-aplicatie {
+  font-size: 3rem;
+  margin: 0 auto;
+  width: fit-content;
+  color: #00796b;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mesaj-aplicatie {
+  font-size: 2rem;
+  margin: 3rem auto 0 auto;
+  width: fit-content;
+  color: #00796b;
+}
+
+.navbar-img {
+  width: 3rem;
+  cursor: pointer;
+}
+
+.logo {
+  width: 15rem;
+  margin: 0 auto;
+  display: block;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.meniu,
+.setari {
+  position: fixed;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 4rem 1rem 1rem 1rem;
+  background-color: rgba(78, 195, 245, 0.95); /* Fundal albastru transparent */
+  transition: transform 0.3s ease;
+  z-index: 1000; /* Asigură că meniul este deasupra altor elemente */
+}
+
+.meniu {
+  left: -300px; /* Meniul este inițial ascuns */
+}
+
+.setari {
+  right: -300px; /* Setările sunt inițial ascunse */
+}
+
+.meniu.deschis {
+  left: 0; /* Meniul este vizibil când este deschis */
+}
+
+.setari.deschis {
+  right: 0; /* Setările sunt vizibile când sunt deschise */
+}
+
+.ascuns {
+  display: none;
+}
+
+.text-profil {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.buton-meniu {
+  color: white;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 0 6px;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.buton-meniu:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.buton-inchidere {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-inchidere {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-inchidere:hover {
+  opacity: 0.8;
+}
+
+/* Secțiunea Despre Mine */
+#despre-mine {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.8); /* Fundal semi-transparent */
+  backdrop-filter: blur(10px); /* Efect de blur */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sectiune-despre {
+  text-align: center;
+}
+
+.text-despre {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2c3e50;
+  text-align: left;
+}
+
+.text-despre h2 {
+  font-size: 2rem;
+  color: #00796b;
+  margin-bottom: 1.5rem;
+}
+
+.text-despre a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.text-despre a:hover {
+  text-decoration: underline;
+}
+
+.urare {
+  font-size: 1.2rem;
+  color: #00796b;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid #00bcd4;
+}
+
+.despre-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Spațiu între poză și text */
+}
+
+.despre-poza {
+  width: 150px; /* Dimensiunea corectă a pozei */
+  height: 150px;
+  border-radius: 50%; /* O face rotundă */
+  object-fit: cover; /* Asigură că poza nu este deformată */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adaugă un efect de umbră */
+}
+
+.text-despre {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  text-align: left;
+}
